@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:background="@drawable/gradient_bg">
+
+    <RelativeLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:ignore="ExtraText">
+
+        <!-- Address and updated_at TextViews -->
+        <LinearLayout
+            android:id="@+id/addressContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32dp"
+                android:text="Tampere, FI" />
+
+            <TextView
+                android:id="@+id/updated_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Next 5 days, 3hr/Intervals" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/backtomain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back to Main"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:background="@drawable/button_background"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/addressContainer"/>
+
+        <ListView
+            android:id="@+id/forecastListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/backtomain"
+            android:layout_marginTop="20dp"/>
+        <!-- Progress bar and error text -->
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:text="Something went wrong" />
+
+    </RelativeLayout>
+</RelativeLayout>
