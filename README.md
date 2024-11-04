@@ -1,4 +1,7 @@
 # MobileAppDev-Kotlin
+Created by Jasu Ahonen for TAMK/Mobile App Development on 05/2024.
+
+
 This repo hosts a WeatherApp built using Android Studio &amp; Kotlin Language
 
 The main screen features current weather, min&max for the day, sunrise, sunset, wind speed, pressure, humidity and info on the author
